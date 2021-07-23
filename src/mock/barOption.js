@@ -3,6 +3,9 @@ export default {
     type: 'category',
     data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
   },
+  tooltip: {
+    trigger: 'item'
+  },
   yAxis: {
     type: 'value'
   },

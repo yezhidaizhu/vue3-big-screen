@@ -2,6 +2,9 @@ export default {
   legend: {
     top: 'bottom'
   },
+  tooltip: {
+    trigger: 'item'
+  },
   series: [
     {
       name: '面积模式',
