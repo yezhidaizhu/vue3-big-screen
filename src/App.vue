@@ -8,6 +8,7 @@
           class="chg-theme-btn p-2 px-4 w-16 bg-blue-500 rounded fixed bottom-10 right-10">
     {{theme}}
   </button>
+
 </template>
 
 <script setup>
@@ -20,6 +21,7 @@ import { THEME_KEY } from "vue-echarts";
 
 const theme = ref(echartDefaultTheme);
 
+// 提供主题
 provide(THEME_KEY, theme);
 
 // 改变主题
@@ -37,9 +39,7 @@ const onThemeChg = () => {
 
 onThemeChg();
 
-if (echartSecTheme) {
-  watch(theme, onThemeChg);
-};
+echartSecTheme && watch(theme, onThemeChg);
 
 </script>
 
