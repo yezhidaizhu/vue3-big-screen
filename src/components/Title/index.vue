@@ -1,4 +1,5 @@
 <template>
+  <!-- 大屏主题 -->
   <div class="h-full flex flex-col">
     <div class="flex justify-between flex-1  items-center">
       <DvDecoration8 style="width:300px;height:50px;" />

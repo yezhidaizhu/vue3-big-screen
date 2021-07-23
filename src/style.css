@@ -4,7 +4,9 @@
   box-sizing: border-box;
 }
 
-body {
+/* 黑暗主题 */
+
+.dark {
   background-color: #090539;
-  color: #fff;
+  color: #ffffff;
 }

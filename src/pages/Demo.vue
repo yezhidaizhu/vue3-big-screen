@@ -1,12 +1,13 @@
 <template>
-  <div class="h-2/4 flex justify-around ">
+  <div class="h-2/4 flex justify-around p-4">
     <div class="w-1/4 h-full">
       <v-chart :option="pieOption"
                :autoresize="true" />
     </div>
     <div class="w-1/4 h-full">
       <v-chart :option="barOption"
-               :autoresize="true" />
+               :autoresize="true"
+               ref='barRef' />
     </div>
     <div class="w-1/4 h-full">
       <v-chart :option="lineOption"
@@ -21,14 +22,12 @@
 </template>
 
 <script setup>
-import { provide } from "vue";
-import { THEME_KEY } from "vue-echarts";
-import { graphic } from 'echarts';
 import pieOption from '@/mock/pieOption';
 import barOption from '@/mock/barOption';
 import lineOption from '@/mock/lineOption';
+import useAutoTip from '@/hooks/useAutoTip';
+import { onMounted, onUnmounted, reactive, nextTick } from "vue";
 
-// 黑暗主题
-provide(THEME_KEY, 'dark');
+useAutoTip('barRef');
 
 </script>

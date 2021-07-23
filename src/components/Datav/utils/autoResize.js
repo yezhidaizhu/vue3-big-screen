@@ -38,7 +38,7 @@ export default {
           if (!dom) {
             console.warn('DataV: Failed to get dom node, component rendering may be abnormal!')
           } else if (!this.width || !this.height) {
-            console.warn('DataV: Component width or height is 0px, rendering abnormality may occur!')
+            // console.warn('DataV: Component width or height is 0px, rendering abnormality may occur!')
           }
 
           if (typeof onResize === 'function' && resize) onResize()
